@@ -1,4 +1,5 @@
 module AST where
+import Control.Concurrent
 
 data AST = Juxtapose AST AST
          | Block     AST
