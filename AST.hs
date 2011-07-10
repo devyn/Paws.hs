@@ -4,14 +4,14 @@ import Control.Concurrent
 data AST = Juxtapose AST AST
          | Block     AST
          | Symbol    String
-         | Empty
+         | Self deriving (Show)
 
 data Execution = Pristine AST
                | Execution UnzippedAST
 
 data UnzippedAST = Top
-                 | Left        AST UnzippedAST
-                 | Right Thing     UnzippedAST
+                 | First        AST UnzippedAST
+                 | Second Thing     UnzippedAST
 
 type Thing = MVar ThingType
 data ThingType = Fork  [Thing]
