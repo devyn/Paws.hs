@@ -3,7 +3,7 @@ import Control.Concurrent
 
 data AST = Juxtapose AST AST
          | Block     AST
-         | Label     String
+         | Symbol    String
          | Empty
 
 data Execution = Pristine AST
