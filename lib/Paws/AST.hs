@@ -1,4 +1,7 @@
-module AST where
+module Paws.AST (
+  AST(..), Execution(..), UnzippedAST(..), Thing, ThingType(..)
+) where
+
 import Control.Concurrent
 
 data AST = Juxtapose AST AST

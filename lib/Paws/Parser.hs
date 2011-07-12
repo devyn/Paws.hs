@@ -1,5 +1,8 @@
-module Parser where
-import AST
+module Paws.Parser (
+  parser, expr, term, paren, block, symbol, lexeme, module Paws.AST
+) where
+
+import Paws.AST
 import Text.Parsec
 import Text.Parsec.String
 import Control.Applicative hiding ((<|>), many)
